@@ -1,5 +1,5 @@
-import learn_random
-r = learn_random.randint(1, 100)
+import random
+r = random.randint(1, 100)
 while True:
     num = input('請猜數字')
     num = int(num)
