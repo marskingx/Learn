@@ -2,19 +2,20 @@
 
 data = []
 count = 0
-with open('/Users/shama/PycharmProjects/file/reviews.txt', 'r') as f:
+with open('reviews.txt', 'r') as f:
     for line in f:
         data.append(line)
         count += 1  # count = count +1
-        if count % 1000000 == 0:
+        if count % 1000 == 0:
             print(len(data))
 
-print(data[0])
-print('------------------')
-print((data[1]))
+# print(data[0])
+# print('------------------')
+# print((data[1]))
 print('檔案讀完了，總共有', len(data), '筆資料')
 
-print([0])
+print(data[0])
+
 wc = {}  # 文字計數
 for d in data:
     words = d.split(' ')
@@ -25,13 +26,14 @@ for d in data:
             wc[word] = 1  # 新增新的key進入wc字典
 
 for word in wc:
-    if wc[word] > 100000000:
+    if wc[word] > 100:
         print(word, wc[word])
+
 print(len(wc))
 print(wc['Allen'])
 
 while True:
-    input('請問你想查什麼字?')
+    word = input('請問你想查什麼字?')
     if word == 'Q':
         break
     print(word, '出現過的次數為：', wc[word])

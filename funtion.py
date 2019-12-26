@@ -3,11 +3,12 @@
 # 它是個功能
 
 def wash(dry=False, water=8):
-    print('加水', water ,'分滿')
+    print('加水', water, '分滿')
     print('加洗衣精')
     print('旋轉')
     if dry:
         print('烘衣')
+
 
 wash(water=10)  # 使用function
 
@@ -18,7 +19,18 @@ def say_hi():
 
 say_hi()
 
-def add(x, y=1):
-    print(x + y)
-add(3, 2)
 
+def add(x, y):
+    return x + y
+
+
+result = add(3, 4)
+print(result)
+
+
+def average(numbers):
+    return  sum(numbers) / len(numbers)
+
+
+print(int(average([1, 2, 3])))
+print(int(average([180, 20, 100])))
